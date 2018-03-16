@@ -1,0 +1,52 @@
+{
+  "version":"1.0",
+  "strings":{
+    "general":{
+      "financial":"Financeiro"
+    },
+    "page_title":{
+      "index":"Gráficos do Sistema",
+      "transaction":"Transações",
+      "history": "Historico",
+      "recurrence":"Recorrencias",
+      "conversion":"Conversor"
+    },
+    "transaction":{
+      "description":"Adiciona transações financeiras no sistema",
+      "name":"Nome da transação: ",
+      "type":{
+        "title":"Tipo: ",
+        "credit":"Crédito",
+        "debit":"Debito"
+      },
+      "value":"Valor: ",
+      "date":"Data: ",
+      "currency":{
+        "title":"Moeda: ",
+        "items":{
+          "BRL":"Real Brasileiro - BRL",
+          "USD":"Estados Unidos - Dolar - USD"
+        }
+      },
+      "recurrence":"Recorrente: ",
+      "comment":"Comentario: "
+    },
+    "index":{
+      "graphs":{
+        "all":"Grafico Geral",
+        "debit":"Gráfico de Despesas",
+        "credit":"Gráfico de Ganhos",
+        "recurrence_debit":"Gráfico de Despesas Recorrentes",
+        "recurrence_credit":"Gráfico de Ganhos Recorrentes",
+        "update":"Atualizar Gráfico"
+      }
+    },
+    "conversion":{
+      "description":"Realiza converções de valores em diferentes moedas.",
+      "value":"Valor"
+    },
+    "history":{
+
+    }
+  }
+}

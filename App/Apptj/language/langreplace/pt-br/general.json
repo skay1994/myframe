@@ -1,0 +1,11 @@
+{
+  "version":"1.0",
+  "strings":{
+    "general":{
+      "welcome":"Bem Vindo"
+    },
+    "dashboard":{
+      "system": "asd"
+    }
+  }
+}

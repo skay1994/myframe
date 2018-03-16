@@ -1,0 +1,42 @@
+{
+  "name": "skay1994/sky_framework",
+  "description": "The framework to multiple apps",
+  "minimum-stability": "beta",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jorge Carlos",
+      "email": "skay_1994@yahoo.com.br"
+    }
+  ],
+  "require-dev":{
+    "phpunit/phpunit": "*",
+    "ghostff/dbug": "^1.0"
+  },
+  "require": {
+    "php":">7.0",
+    "monolog/monolog": "2.0.x-dev",
+    "doctrine/orm": "^2.5",
+    "symfony/console": "^3.3@beta",
+    "symfony/filesystem": "^3.3@beta",
+    "symfony/cache": "^3.3@beta",
+    "symfony/templating": "^3.3@beta",
+    "symfony/http-foundation": "^3.3@beta",
+    "phpmailer/phpmailer": "^6.0@RC",
+    "guzzlehttp/guzzle": "^6.3",
+    "filp/whoops": "^2.1"
+  },
+  "config":{
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4":{
+      "App\\":"App/",
+      "SKYCore\\":"system/SKYCore/"
+    },
+    "classmap":[
+      "App/",
+      "system/SKYCore/"
+    ]
+  }
+}

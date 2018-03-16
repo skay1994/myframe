@@ -1,0 +1,8 @@
+{
+  "version":"1.0",
+  "strings":{
+    "empty_fields":{
+      "value":"Não é possivel enviar o campo de valor vazio."
+    }
+  }
+}

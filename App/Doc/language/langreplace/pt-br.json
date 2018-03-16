@@ -1,0 +1,217 @@
+{
+  "version":"1.0",
+  "strings":{
+    "app_name":"Documentação",
+    "menu_top":{
+      "home":"Home",
+      "download":"Download",
+      "docs":"Documentação",
+      "about":"Sobre",
+      "search":"Pesquisar"
+    },
+    "menu_lateral": {
+      "home":"Inicio",
+      "install": {
+        "title":"Instalação",
+        "download":"Download",
+        "install":"Instalação",
+        "informations":"Informações"
+      },
+      "applications":{
+        "title":"Aplicativos",
+        "about":"Sobre o Aplicativo",
+        "folder_structure":"Estrutura de Pastas",
+        "configurations":"Configurações",
+        "localization":"Idioma",
+        "model":"Modelo",
+        "mvc_controller":"MVC Controller",
+        "restfull_controller":"RESTFull Controller"
+      },
+      "system":{
+        "title":"Sistema"
+      },
+      "advanced": {
+        "title": "Avançado",
+        "hooks":"Hooks"
+      }
+    },
+    "pages":{
+      "download":{
+        "title":"Download",
+        "text1":"Aqui você vai ver instruções de como fazer o download do framework. Para instruções de como fazer a instalação <a href=\"/install\" title=\"Pagina de intalação\">clique aqui</a>."
+      },
+      "applications":{
+        "about":{
+          "title":"Sobre os Aplicativos",
+          "description":"Um resumo sobre como os aplicativos funcionam...",
+          "type":{
+            "title":"Tipos de Aplicativos",
+            "description":"Esses são os tipos de aplicativos atualmente suportados pelo framework.",
+            "mvc": {
+              "title":"Aplicação MVC",
+              "description":"Uma aplicacao que usa o modelo de <strong>função/controle</strong> mais <strong>ação</strong>, onde você acessa ou requisita com esse padrão.",
+              "examples":{
+                "title":"Exemplos:",
+                "description":"Para exemplo vamos usar um aplicativo de blog.",
+                "ex1":"Para adicionar um novo post o acesso seria nesse formato: <strong>http://seusite.com/blog/post/novo</strong>",
+                "ex2":"Para editar um post, você precisa passar um argumento para poder carregar as informações de uma postagem em especifico, para isso você pode passar esse argumento depois da ação, o acesso é nesse formato: <strong>http://seusite.com/blog/post/editar/iddopost </strong>"
+              }
+            },
+            "restfull": {
+              "title":"Aplicação RESTFull",
+              "description":"Uma aplicacao que trabalha com o protocolo HTTP, usando metodos de requisição, cabeçalhos, codigos de status, etc.",
+              "examples":{
+                "title":"Exemplos:",
+                "description":"Esses exemplos necessitam de uma ferramenta de terceiros, ou algum metodo fazer essas requisições. <br>Em javascript: <a href=\"http://api.jquery.com/jquery.ajax/\" target=\"_blank\">jQuery Ajax</a>, <a href=\"https://docs.angularjs.org/api/ng/service/$http\" target=\"_blank\">Angular JS Httpd</a>",
+                "ex1":"Para adicionar um novo post o acesso seria nesse formato: <strong>http://seusite.com/blog/post/novo</strong>",
+                "ex2":"Para editar um post, você precisa passar um argumento para poder carregar as informações de uma postagem em especifico, para isso você pode passar esse argumento depois da ação, o acesso é nesse formato: <strong>http://seusite.com/blog/post/editar/iddopost </strong>"
+              }
+            }
+          }
+        },
+        "configuration": {
+          "title":"Configurações",
+          "text1": "Aqui você vai uma lista de todas as configurações do framework e seus aplicativos.",
+          "config_global":{
+            "title":"Configurações Globais",
+            "description": "Essas configurações são usadas como base para todos os aplicativos, e também definem comportamentos globais em relação a como os aplicativos são carregados.",
+            "items":{
+              "apps":{
+                "description":"Lista os aplicativos do sistema, somente serão carregados os aplicativos que estiverem nessa lista.",
+                "text1":"Para uma unica aplicação você pode definir com uma string simples: <br> Ex: <code>$C['apps'] = 'firstapp';</code>",
+                "text2":"Para multiplas aplicações você pode definir com um array com a lista de aplicativos: <br> Ex: <code>$C['apps'] = array('firstapp','secundapp');</code>",
+                "type":"String/Array",
+                "text1_alert": "<strong>Informação:</strong> Para uso de multiplos aplicativos, é necessario que a configuração <a href=\"application/configuration#global_multiapps\"><code>$C['multiapps']</code></a> como <strong>TRUE</strong>"
+              },
+              "multiapps":{
+                "description":"Ativa ou desativa a verificação para varios aplicativos no sistema.",
+                "type":"Boolean",
+                "default":"true",
+                "text1_alert": "<strong>Informação:</strong> É necessario para o uso de multiplos aplicativos.",
+                "text3_alert": "<strong>Informação:</strong> Caso desativado e tiver um array no item <a href=\"application/configuration#global_apps\">$C['apps']</a> será usado o valor de <a href=\"application/configuration#global_default_app\">$C['default_app']</a> como aplicativo padrão."
+              },
+              "default_app":{
+                "description":"Define o aplicativo padrão do sistema.",
+                "text1":"Será usado para as requisições onde não foi especificado nenhum aplicativo pela url.",
+                "type":"String",
+                "text1_alert": "<strong>Informação:</strong> Caso essa opção não esteja disponivel, sera usado o valor de <code>$C['apps']</code>, se o mesmo for um array, será usado o primeiro valor do array.",
+                "text2_alert": "<strong>Informação:</strong> Caso desativado e tiver um array no item <a href=\"application/configuration#global_apps\">$C['apps']</a> será usado o valor de <a href=\"application/configuration#global_default_app\">$C['default_app']</a> como aplicativo padrão."
+              },
+              "default_language":{
+                "description":"Define o idioma padrão do aplicativo.",
+                "text1":"É usado como base nas funções de idioma do sistema.",
+                "default":"en-us",
+                "type":"String",
+                "text1_alert":"Caso a opção não exista ou seja vazia, será usado o valor padrão que é <strong>en-us</strong>.",
+                "text2_alert":"Mais informações em <a href=\"application/localization\">aqui</a>."
+              },
+              "language_file_type":{
+                "description":"Define o tipo de tratamento q sera usado no arquivo de idioma.",
+                "text1":"Valores permitidos: <br><br><strong>json:</strong> Trata o arquivo com formato .json;<br><strong>array/php:</strong> Inclue um arquivo .php e pega os valores do array <code>$LANG</code>, qualquer outro valor com outra variavel é ignorado pelo sistema.",
+                "text1_alert":"Mais informações em <a href=\"application/localization\">aqui</a>.",
+                "default":"json",
+                "type":"String"
+              },
+              "language_return_type":{
+                "description":"Define o tipo de acesso as chaves de linguagem no sistema.",
+                "text1":"São dois tipos de retorno: <br><br><strong>object:</strong> Retorna as chaves como objetos: <br><strong>Ex:</strong> <code>$this->language->text->title</code>, <code>$this->language->text->subtitle</code>. <br><br><strong>array:</strong> Retorna as chaves como chaves de arrays: <br><strong>Ex:</strong> <code>$this->language->text['title']</code>, <code>$this->language->text['subtitle']</code>",
+                "default":"object",
+                "type":"String",
+                "text1_alert":"Mais informações em <a href=\"application/localization\">aqui</a>."
+              }
+            },
+            "can_not_be_changed":"<strong>Atenção:</strong> Essa configuração não pode ser substituida pelo aplicativo.",
+            "can_be_changed":"<strong>Atenção:</strong> Essa configuração pode ser substituida pelo aplicativo."
+          },
+          "config_app":{
+            "title":"Configurações do Aplicativo",
+            "description":"Configurações individuais dos aplicativos.",
+            "items":{
+              "app_name":{
+                "description":"O nome do aplicativo, ele pode ser usado dentro da aplicação para identificar o aplicativo, <br>por padrão ele é adicionado ao titulo da pagina caso nao seja passado nenhum outro valor.",
+                "text1":"Ex: <code>$A['app_name'] = 'Blog do Seu José';</code>",
+                "type":"String",
+                "text1_alert":"<strong>Informação:</strong> Caso não queria nomear seu aplicativo, deixe em branco para evitar problemas."
+              },
+              "app_folder":{
+                "description":"Define o nome da pasta padrão do aplicativo.",
+                "text1":"O sistema irá processar todas as requisições usando essa informação. Possibilitando a criação de uma aplicação para mascarar outra.",
+                "text2":"Usando o exemplo do aplicativo de blog. É possivel acessar e processar as informações como se fosse de outro aplicativo, por exemplo um aplicativo para administrar o blog, porem, seria visualizado pelo usuario como se não trocasse de aplicação.",
+                "text3":"Ex: <code>$A['app_folder'] = 'blog';</code>",
+                "type":"String",
+                "text1_alert": "<strong>Aviso:</strong> Cuidado com a escrita, pois vai afetar como o sistema busca os arquivos para serem processados."
+              }
+            }
+          },
+          "types_allowed":"Tipos permitidos: ",
+          "default":"Valor padrão: ",
+          "copytoclipboard":"Copiar para a area de transferencia."
+        },
+        "mvc_controller":{
+          "title":"MVC Controller",
+          "text1":"Esse controller gerencia aplicações no modelo <strong>Model-View-Controller (MVC)</strong>, caso não conheça o padrão veja mais <a href=\"https://pt.wikipedia.org/wiki/MVC\" title=\"Artigo Wikipedia sobre o padrão MVC\" target=\"_blank\">aqui</a>.",
+          "text2":"Aplicações baseadas em <a href=\"application/model\" title=\"Model\">Model</a>, <a href=\"application/view\">View</a>, <a href=\"application/mvc_controller\" title=\"MVC Controller\">Controller</a> são amplamente usadas para varias finalidades.",
+          "characteristics":{
+            "title":"Caracteristicas",
+            "description":"As caracteriscas disponiveis para uso.",
+            "cache":{
+              "text1":"O Cache é um <a href=\"https://symfony.com/doc/current/components/cache.html\" target=\"_blank\">componente</a> do Symfony Framework. Para informações mais completas sobre cache <a href=\"https://symfony.com/doc/current/components/cache.html\" target=\"_blank\">veja aqui</a>.",
+              "desactive": {
+                "title":"Desativar o Cache",
+                "text1": "O cache ja vem ativado para todo o sistema por padrão, porem caso seja necessário desativalo em um controller em específico, declare uma variavel estatica e protegida no escopo de seu arquivo. <br><br>Obs: A variavel precisa ser protegida ou publica, se for privada vai occorer um erro ao tentar acessar na hora de fazer a verificação.",
+                "text2": "Uso: coloque essa variavel no escopo da classe para desativar o cache, caso queira reativar é so excluir a linha: <br><code>protected $disable_cache = true;</code>"
+              },
+              "cache_key":{
+                "title":"Chave de Identificação",
+                "text1":"O sistema de cache trabalha com chaves para identificar a pagina acessada, essa informação fica disponivel pelo recurso de roteamento. <br>Dentro de qualquer metodo da classe chave use o seguinte codigo e será retornado uma string da chave para aquele metodo em especifico: <code>$this->router->getCacheKey()</code>"
+              }
+            }
+          },
+          "properties":{
+            "title":"Propriedades",
+            "description":"As propriedades disponiveis para uso.",
+            "disable_cache":{
+              "text1":"Quando ativado o cache age em todo o sistema, caso queira desativar em algum controler.",
+              "text2": "Uso: coloque essa variavel no escopo da classe para desativar o cache, caso queira reativar é so excluir a linha: <br><code>protected $disable_cache = true;</code>",
+              "alert1": "<strong>Obs:</strong> A variavel precisa ser publica ou protegida, caso defina como privada vai ocorrer erros durante a verificação."
+            },
+            "view_by_folder":{
+              "text1":"Define se o controler atual vai buscar o arquivo para view em uma subpasta com o nome do controler.",
+              "text2": "Essa configuração sobreescreve a configuração do aplicativo relacionada a localização das views. Caso queira voltar a configuração padrão é so remover essa linha.",
+              "text3": "Uso: <code>protected $view_by_folder = true;</code>",
+              "alert1": "<strong>Obs:</strong> A variavel precisa ser publica ou protegida, caso defina como privada vai ocorrer erros durante a verificação."
+            },
+            "custom_view_folder":{
+              "text1": "Define se o controler atual vai buscar o arquivo para view em uma subpasta com o nome digitado.",
+              "text2": "Essa configuração sobreescreve a configuração do aplicativo relacionada a localização das views. Caso queira voltar a configuração padrão é so remover essa linha.",
+              "text3": "Uso: <code>protected $custom_view_folder = 'nomedapasta';</code>",
+              "alert1": "<strong>Obs:</strong> A variavel precisa ser publica ou protegida, caso defina como privada vai ocorrer erros durante a verificação."
+            },
+            "disable_all_template":{
+              "text1": "Desativa todos os templates configurado para o controler atual. Assim so carrega o arquivo atual de view.",
+              "text2": "Uso: <code>protected $disable_all_template = true;</code>",
+              "alert1": "<strong>Obs:</strong> A variavel precisa ser publica ou protegida, caso defina como privada vai ocorrer erros durante a verificação."
+            }
+          },
+          "functions": {
+            "title":"Funções",
+            "text1":"Essas são as funções disponiveis para uso dentro do MVC.",
+            "functionView": {
+              "description":"Carrega a view, essa função aceita 3 parametros:",
+              "args":"<strong >$file:</strong> O arquivo que será carregado para visualizar a \"view\"; <br> <strong>$data:</strong> Passa as informações para serem usadas como variaveis no arquivo, para mais informações <a href=\"#\">veja mais aqui</a>; <br><strong>$disableTemplate:</strong> Desativa o template para visualizar somente o arquivo da view, caso não exista um template configurado essa opção não faz nenhuma alteração no sistema."
+            },
+            "functionLoad":{
+              "description":"Carrega os modulos, bibliotecas e helpers para o sistema:",
+              "args": {
+                "arg1":"<strong >$type:</strong> O tipo de arquivo que será carregado, os valores aceitos são: modules,library,helper <br><br> Obs: Qualquer outro valor irá invalidar a função e nenhum processo será executado.",
+                "arg2":"<strong>$file:</strong> O arquivo que será carregado, vão ser aceitos dois tipos de valores: <br>Por <strong>String</strong>: Será o nome da class ou arquivo que será carregado. <br>Por <strong>array</strong> Será o nome do arquivo junto com o nome do objeto que será criado no sistema, <strong>esse tipo só é valido para modules e library</strong>. <br>Uso passe um array composto por o primeiro item é o nome da classe caso contrario vai causar falha no sistema. <br><br> Ex: <code> array('Configuration' //nome da classe,'config' //nome do objeto no sistema);</code>",
+                "arg3":"<strong>$app:</strong> Define de qual aplicativo a classe/arquivo será carregada, dando a possibilidade de compartilhar codigo entre os aplicativos. O nome da pasta base do aplicativo. <br>Essa opção não depente dos valores registrados na configuração global <a href=\"application/configuration#global_apps\" target=\"_blank\">$C['apps']</a>, podendo usar qualquer pasta com a estrutura correta. <br><br>Para carregar classes/arquivos da estrutura global(<a href=\"#\">veja mais aqui</a>), use como aplicativo a palavra chave \"global\"."
+              },
+              "text1_alert":"<strong>Informação:</strong> A função carrega os arquivos usando o <strong>namespace</strong> de acordo com o tipo, exeto para helpers que vai somente incluir o arquivo no sistema."
+            }
+          }
+        }
+      }
+    }
+  }
+}

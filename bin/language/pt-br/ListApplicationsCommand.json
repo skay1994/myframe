@@ -1,0 +1,5 @@
+{
+  "description":"Lista todas as aplicações.",
+  "help":"Lista todas as aplicações registradas no framework.",
+  "text1":"Mostrando todas as aplicações registradas atravez do arquivo em \n\n\"%s\""
+}

@@ -1,0 +1,4 @@
+{
+  "invalid_current_return_type": "This type %s used in \"setReturnType\" is invalid",
+  "file_not_exists": "O arquivo %s não foi encontrado em: (%s)"
+}

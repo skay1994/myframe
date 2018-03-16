@@ -1,0 +1,5 @@
+{
+  "description":"Altera opções no arquivo de configuração global dos aplicativos",
+  "help":"Com esse comando você pode alterar configurações globais usadas por todos os aplicativos de maneira simples.",
+  "text1":"\nPor aqui é possivel alterar qualquer configuração dos aplicativos,\nuse com cuidado pois não é possivel reverter essas mudanças pelo terminal.\n\nPara alterar configurações globais, digite \"global\" como o aplicativo. \n\n Uso: %s doc app_name Documentação45 "
+}

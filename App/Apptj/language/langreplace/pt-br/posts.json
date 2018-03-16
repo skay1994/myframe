@@ -1,0 +1,35 @@
+{
+  "version":"1.0",
+  "strings":{
+    "general":{
+      "title":"Postagens",
+      "new_post":"Nova Postagem",
+      "delete_post":"Excluir Postagem"
+    },
+    "new_post":{
+      "title":"Novo Post",
+      "post_title":"Titulo",
+      "content":"Conteudo",
+      "categories":"Categorias",
+      "categories_description":"Selecione uma Categoria",
+      "tags":"Tags",
+      "tags_description":"Digite as tags relacionadas as postagens separadas por virgura (,)",
+      "type":"Tipo",
+      "type_description":"Selecione o tipo de postagem",
+      "options":{
+        "title":"Opções da Publicação",
+        "date":"Data de Publicação",
+        "author":"Autor",
+        "delete":"Deletar Publicação",
+        "delete_popup":"Move a publicação para a lixeira para ser apagada mais tarde.",
+        "save":"Salvar Publicação",
+        "save_popup":"Salva as informações da publicação no sistema.",
+        "favorite":"Favoritar Publicação",
+        "favorite_popup":"Marca a publicação para que seja encontrada mais facilmente.",
+        "status":"Estado Atual",
+        "galery":"Abrir Galeria",
+        "galery_popup":"Abrir galeria de imagens, para enviar ou selecionar novas imagens para a postagem"
+      }
+    }
+  }
+}

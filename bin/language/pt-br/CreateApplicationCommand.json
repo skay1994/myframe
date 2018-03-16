@@ -1,0 +1,17 @@
+{
+  "description":"Cria uma nova aplicação.",
+  "help":"Com esse comando você pode criar aplicações e gerar a configuração basica apartir do terminal.",
+  "new":{
+    "title":"Informações do aplicativo",
+    "name":"Digite o nome do aplicativo: ",
+    "folder":"Digite o nome da pasta do aplicativo: ",
+    "lang":"Idioma: ",
+    "database": {
+      "configuration":"Configuração do banco de dados: ",
+      "title":"Banco de dados",
+      "enable":"Ativar o banco de dados? (y/n) ",
+      "driver":"Driver do banco de dados: ",
+      "host":"Host do banco de dados: "
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "bower_components/bootstrap/scss/bootstrap";
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+
+  .nav-link {
+    border-radius: 0;
+  }
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.navbar-text {
+  padding: .425rem 0 0 .425rem;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.fixed-top{
+  background: rgba(255,255,255,.85);
+}
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.list-hidding {
+  padding-left: 20px;
+
+  .fa-anchor {
+    position: relative;
+    top: 24px;
+  }
+
+  .config_name {
+    color: $blue;
+    border-bottom: $card-border-width solid $card-border-color;
+    padding-left: 20px;
+    cursor: pointer;
+
+    .value_type {
+      color: #969798;
+      font-style: italic;
+    }
+
+    .value_variable {
+      color: #660000;
+    }
+
+  }
+
+  p {
+    padding-left: 20px;
+  }
+}
+
+.hidden {
+  display: none!important;
+}
+
+.config_description{
+  padding: 10px;
+}

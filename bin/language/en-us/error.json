@@ -1,0 +1,12 @@
+{
+  "configuration":{
+    "no_global_config_file" : "This global configuration file not exists."
+  },
+  "language":{
+    "invalid_current_return_type": "Type %s used in \"setReturnType\" is invalid"
+  },
+  "applications":{
+    "app_not_registered":"This app %s not registered in system settings",
+    "not_multapp_enabled":"Setting up multiple applications is disabled, please enable to be able to define the application used by the url"
+  }
+}
